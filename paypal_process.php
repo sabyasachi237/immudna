@@ -9,22 +9,22 @@ ini_set('display_errors', 1);
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
-    // $first_name = $_POST['first_name'];
-    // $last_name = $_POST['last_name'];
-    // $country = $_POST['country'];
-    // $company_name = $_POST['company_name'];
-    // $address = $_POST['address'];
-    // $city = $_POST['city'];
-    // $state = $_POST['state'];
-    // $pin = $_POST['pin'];
-    // $email = $_POST['email_id'];
-    // $phone = $_POST['phone'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $country = $_POST['country'];
+    $company_name = $_POST['company_name'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $pin = $_POST['pin'];
+    $email = $_POST['email_id'];
+    $phone = $_POST['phone'];
 
-    // echo $updateUserQuery = "UPDATE users 
-    //     SET first_name = '".$first_name."', last_name = '".$last_name."', country = '".$country."', company_name = '".$company_name."', address = '".$address."', city = '".$city."', state = '".$state."', pin = '".$pin."', email_id = '".$email."', phone = '".$phone."'
-    //     WHERE id = '".$user_id."'";
+      $updateUserQuery = "UPDATE users 
+        SET first_name = '".$first_name."', last_name = '".$last_name."', country = '".$country."', company_name = '".$company_name."', address = '".$address."', city = '".$city."', state = '".$state."', pin = '".$pin."', email_id = '".$email."', phone = '".$phone."'
+        WHERE id = '".$user_id."'";
 
-    // mysqli_query($conn, $updateUserQuery);
+    mysqli_query($conn, $updateUserQuery);
 
     $orderID = mysqli_insert_id($conn);
 
@@ -69,7 +69,7 @@ if (isset($_SESSION['user_id'])) {
         $created_at = date('Y-m-d H:i:s');
 
 
-       echo $insertPurchaseQuery = "INSERT INTO purchase_details 
+         $insertPurchaseQuery = "INSERT INTO purchase_details 
             (userid, orderid, product_id, quantity, created_at) 
             VALUES 
             ('".$user_id."', '".$shippingID."', '".$product_id."', '".$quantity."', '".$created_at."')";
