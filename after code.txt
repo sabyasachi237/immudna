@@ -1,0 +1,86 @@
+<script>
+	paypal_sdk.Buttons({
+		onClick: function() {
+			var first_name = $('#first_name').val();
+			var last_name = $('#last_name').val();
+			var country = $('#country').val();
+			var address = $('#address').val();
+			var city = $('#city').val();
+			var state = $('#state').val();
+			var pin = $('#pin').val();
+			var email_id = $('#email_id').val();
+			var Phone = $('#phone').val();
+
+			if (first_name.length == 0) {
+				$('.first_name').text("*this field is required");
+				return false;
+			}
+
+			if (last_name.length == 0) {
+				$('.last_name').text("*this field is required");
+				return false;
+			}
+
+			if (country.length == 0) {
+				$('.country').text("*this field is required");
+				return false;
+			}
+
+			if (address.length == 0) {
+				$('.address').text("*this field is required");
+				return false;
+			}
+
+			if (city.length == 0) {
+				$('.city').text("*this field is required");
+				return false;
+			}
+
+			if (state.length == 0) {
+				$('.state').text("*this field is required");
+				return false;
+			}
+
+			if (pin.length == 0) {
+				$('.pin').text("*this field is required");
+				return false;
+			}
+
+			if (email_id.length == 0) {
+				$('.email_id').text("*this field is required");
+				return false;
+			}
+			if (phone.length == 0) {
+				$('.phone').text("*this field is required");
+				return false;
+			}
+			// You can add further validations for other fields if needed
+
+			// If all validations pass, proceed to PayPal payment
+		},
+		style: {
+			layout: 'horizontal'
+		},
+		createOrder: function(data, actions) {
+			return actions.order.create({
+				purchase_units: [{
+					amount: {
+						value: '<?= $total_price1 ?>'
+					}
+				}]
+			});
+		},
+
+		// Finalize the transaction
+		onApprove: function(data, actions) {
+			return actions.order.capture().then(function(orderData) {
+				// Show a success message to the buyer
+				//alert('Transaction completed by ' + details.payer.name.given_name + '!');
+				// window.location.replace("success.php?uid=<?= $_SESSION['uid'] ?>&sid=<?= $_GET['sid'] ?>&price=<?= $_GET['price'] ?>&list=<?= $_GET['list'] ?>");
+				console.log('capture result',orderData, JSON.stringify(orderData, null, 2));
+				const transaction =orderData.purchase_units[0].payments.captures[0];
+				alert('transaction'${transaction.status}; ${transaction.id})
+			});
+		}
+	}).render('#paypal-button-container');
+</script>

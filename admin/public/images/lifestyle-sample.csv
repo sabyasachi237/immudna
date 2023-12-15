@@ -1,0 +1,17 @@
+CLASSIFICATION,BIO (SUB CLASSIFICATION),Gene,Section,Homozygous Risk Variant,Heterozygous Risk Variant,(Main) long Description,High(Homo) risk short description for summary,Intermediate(Hetero) risk short description for summary,Normal risk short description for summary,Phenotype Description,Updated High Risk/ Moderate Recommendation
+Nutrient Metabolism,Vitamin B12,FUT2,rs601338,GG ,GG or GA,"
+The FucosylTransferase 2 (FUT2) gene is associated with the synthesis of fucosyltransferase 2. This enzyme found to attach the bacterium Helicobacter pylori to the gastric mucosa, which affects the absorption of vitamin B12 in the gut and transport between cells.  Variation of this gene is linked to plasma Vitamin B12 deficiency.",High risk of Vitamin B12 Deficiency.,,High or intermediate risk of Vitamin B12 Deficiency.,"GG:Individuals with the GG genotype, carrying the risk allele, tend to have low levels of H antigen and have a high risk for Vitamin B12 deficiency.
+GA:
+AA: Individuals with the AA genotype, without carrying the risk allele, tend to have normal level of H antigen and have a low risk for Vitamin B12 deficiency. ","CC:After consulting with your healthcare provider, Eat a healthy diet and exercise regularly.
+ C.DEL: None
+ DEL: none"
+Fitness & Injury,Vitamin D,MMP1,rs1799750,CC (increase ACL rapture risk),CC or C.DEL (increase ACL rapture risk),"The MMP1 gene provides instructions for creating a protein called matrix metalloproteinase-1 (MMP-1). This protein is an enzyme that plays a role in breaking down components of the extracellular matrix, which is the complex network of proteins and other molecules that provide structure and support to tissues in the body. MMP1 gene and its snp rs1799750 is known to be associated with anterio crucial ligament rupture. ",High risk of anterio crucial ligament rupture. ,,High or Intermediate risk of anterio crucial ligament rupture. ,"CC:Individuals with the CC genotype, carrying the risk allele, have a high risk of muscle damage.
+CG:
+GG: Individuals with the GG genotype, carrying the risk allele, have a high risk of muscle damage. ","GG:After consulting with your healthcare provider, focus on consuming the amount of reccomended vitamin D daily.
+GA: Moderate-After consulting with your healthcare privoder, focus on consuming the amount of reccomended vitamin D daily. 
+AA: none"
+Nutrient Metabolism,Cholesterol Level,CYP2R1,rs10741657,GG ,GG ," The CYP2R1 gene and its snps rs10741657 encodes an enzyme that plays a crucial role in converting vitamin D into its active form, which is important for various physiological functions in the body. Variations in the gene can impact the efficiency of this conversion process and influence an individual's vitamin D status.",High  risk of vitamine D deficiency . ,,High or Intermediate risk of vitamine D deficiency . ,"GG:Individuals with the GG genotype, carrying the risk allele, may have lower levels vitamin D due to reduced binding capacity of vitamin D binding protein. This increases the risk of vitamin D deficiency.
+GA:
+AA: Individuals with the AA genotype, without the risk allele, tend to have normal levels vitamin D and have low risk of Vitamin D deficiency.","GG:After consulting with your healthcare provider, focus on consuming the amount of reccomended Vitamin B12 daily. 
+GA:After consulting with your healthcare provider, focus on consuming the amount of reccomended Vitamin B12 daily.
+AA: None"
